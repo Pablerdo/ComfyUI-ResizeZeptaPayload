@@ -1,9 +1,10 @@
 
 from .nodes.image_nodes import ResizeImageBatch
-from .nodes.trajectory_nodes import ResizeTrajectoryBatch
+from .nodes.trajectory_nodes import ResizeTrajectories
+
 NODE_CONFIG = {
     "ResizeImageBatch": {"class": ResizeImageBatch, "name": "ResizeImageBatch"},
-    "ResizeTrajectoryBatch": {"class": ResizeTrajectoryBatch, "name": "ResizeTrajectoryBatch"},
+    "ResizeTrajectories": {"class": ResizeTrajectories, "name": "ResizeTrajectories"},
 }
 
 def generate_node_mappings(node_config):
