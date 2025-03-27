@@ -3,7 +3,7 @@ name = "comfyui-resizezeptapayload"
 description = "Resize a batch of trajectories or images"
 version = "1.0.0"
 license = {file = "LICENSE"}
-dependencies = ["librosa", "numpy", "pillow>=10.3.0", "scipy", "color-matcher", "matplotlib", "huggingface_hub", "peft"]
+dependencies = ["librosa", "numpy", "pillow>=10.3.0", "scipy", "color-matcher", "matplotlib", "huggingface_hub", "peft", "mss", "opencv-python", "torch"]
 
 [project.urls]
 Repository = "https://github.com/Pablerdo/ComfyUI-ResizeZeptaPayload"
