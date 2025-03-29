@@ -14,10 +14,11 @@ class ResizeImageBatch:
                 "keep_proportion": ("BOOLEAN", {"default": False}),
                 "divisible_by": ("INT", {"default": 1, "min": 1, "max": 512, "step": 1}),
                 "crop": (["disabled", "center"], {"default": "disabled"}),
-            },
-            "optional": {
                 "width_input": ("INT", {"forceInput": True}),
                 "height_input": ("INT", {"forceInput": True}),
+            },
+            "optional": {
+
                 "get_size_from_image": ("IMAGE",),
             }
         }
@@ -44,14 +45,14 @@ Keep proportions maintains the aspect ratio of the images.
         B, H, W, C = images.shape
         
         # Determine dimensions from inputs
-        if width_input is not None:
-            output_width = width_input
-        if height_input is not None:
-            output_height = height_input
-        if get_size_from_image is not None:
-            _, get_h, get_w, _ = get_size_from_image.shape
-            output_height = get_h
-            output_width = get_w
+        # if width_input is not None:
+        #     output_width = width_input
+        # if height_input is not None:
+        #     output_height = height_input
+        # if get_size_from_image is not None:
+        #     _, get_h, get_w, _ = get_size_from_image.shape
+        #     output_height = get_h
+        #     output_width = get_w
         
         if keep_proportion and get_size_from_image is None:
             # Scale based on which dimension is smaller in proportion to the desired dimensions
